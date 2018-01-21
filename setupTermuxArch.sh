@@ -2,7 +2,6 @@
 # Copyright 2017 by SDRausty. All rights reserved.  🌎 🌍 🌏 🌐 🗺
 # Website for this project at https://sdrausty.github.io/TermuxArch
 # See https://sdrausty.github.io/TermuxArch/CONTRIBUTORS Thank You! 
-# If you are encountering issues with the system-image.tar.gz file regarding download time, repository website connection and/or md5 checksum error, edit this script and change $mirror to your desired geographic location in knownconfigurations.sh.  Before editing this file, ensure termux-wake-lock is running during script operation and that you have a stable Internet connection. 
 ################################################################################
 
 bin=startarch
