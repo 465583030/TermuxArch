@@ -6,6 +6,7 @@
 
 bin=startarch
 #flag="/scripts/files/experimental"
+#flag="/scripts/files/stable"
 flag=""
 
 printoneoclock ()
