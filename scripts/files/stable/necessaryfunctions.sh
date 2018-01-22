@@ -7,12 +7,12 @@
 adjustmd5file ()
 {
 	if [ $(uname -m) = x86_64 ] || [ $(uname -m) = i686 ];then
-		wget -q -N --show-progress --compression=none -qO- http://$mirror${path}md5sums.txt
+		wget -q -N --show-progress http://$mirror${path}md5sums.txt
 		filename=$(ls *tar.gz)
 		sed '2q;d' md5sums.txt > $filename.md5
 		rm md5sums.txt
 	else
-		wget -q -N --show-progress --compression=none -qO- http://$mirror$path$file.md5
+		wget -q -N --show-progress http://$mirror$path$file.md5
 	fi
 }
 
@@ -85,9 +85,9 @@ getimage ()
 {
 	# Get latest image for x86_64 wants refinement.  __Continue does not work.__ 
 	if [ $(getprop ro.product.cpu.abi) = x86_64 ];then
-		wget -A tar.gz -m -nd -np --compression=none -qO- http://$mirror$path
+		wget -A tar.gz -m -nd -np http://$mirror$path
 	else
-		wget -q -c --show-progress --compression=none -qO- http://$mirror$path$file
+		wget -q -c --show-progress http://$mirror$path$file
 	fi
 }
 
